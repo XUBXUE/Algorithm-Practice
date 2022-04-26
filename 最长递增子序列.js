@@ -33,6 +33,7 @@ function getSequence(nums) {
       }
     }
   }
+  console.log(result.map(v => nums[v]))
   console.log(result)
   // 利用前驱节点重新计算result
   let length = result.length, //总长度
@@ -47,8 +48,14 @@ function getSequence(nums) {
   return result; // 2 1 8 4 6 7 
   //013467
 }
-
+// 用前驱节点前
+//                   值：1, 3, 4, 6, 7, 9
+//                 索引：2, 1, 8, 4, 6, 7
 console.log(getSequence([2, 3, 1, 5, 6, 8, 7, 9, 4])); // 返回下标：2 1 8 4 6 7   对应值：1 3 4 6 7 9
+//            前一个索引：u, 0, u, 1, 3, 4, 4, 6, 1
+// 用前驱节点后
+//                   值：2, 3, 5, 6, 7, 9
+//                 索引：0, 1, 3, 4, 6, 7
 //235679
 
 // console.log(getSequence([3, 2, 8, 9, 5, 6, 7, 11, 15, 4])) // 2 5 6 7 11 15
